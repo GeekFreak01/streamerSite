@@ -59,7 +59,8 @@
             openTab('home');
             updateThemeIcon();
         };
-    function updateTrackCount() {
+        
+        function updateTrackCount() {
             const trackList = document.getElementById('track-list');
             const trackCount = document.getElementById('track-count');
             trackCount.textContent = `Количество заказанных треков: ${trackList.children.length}`;
@@ -276,12 +277,12 @@
         }
 
         /* Specific styling for 7TV extension box */
-        
+        .extension-box.seven-tv {
             border: 5px solid rgba(0, 123, 255, 0.5);
         }
 
         /* Dark theme specific styling for 7TV extension box */
-        body.dark .extension-box.7tv {
+        body.dark .extension-box.seven-tv {
             background-color: rgba(0, 123, 255, 0.05);
             border: 5px solid rgba(0, 123, 255, 0.7);
         }
@@ -394,7 +395,7 @@
     <section id="extensions">
         <h2>Расширения</h2>
         <div class="extensions-container">
-            <div class="extension-box 7tv">
+            <div class="extension-box seven-tv">
                 <h3>7TV</h3>
                 <p>Расширение, в котором есть все смайлы — и из 7TV, и из BTTV, и из FFZ</p>
                 <p>
@@ -435,8 +436,8 @@
             try {
                 const response = await fetch('https://api.twitch.tv/helix/streams?user_login=geekfreak_', {
                     headers: {
-                        'Client-ID': 'YOUR_CLIENT_ID',
-                        'Authorization': 'Bearer YOUR_ACCESS_TOKEN'
+                        'Client-ID': 'j51hx7542g7o8fmxvq6dz75jw6x1l9',
+                        'Authorization': '3gxnkm5pan1kag7t4lw4a7pkq98ntn'
                     }
                 });
                 const data = await response.json();
@@ -467,7 +468,6 @@
             trackItem.innerHTML = `<iframe width="560" height="315" src="${trackUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
             trackList.appendChild(trackItem);
             updateTrackCount();
-            updateTrackCount();
         }
 
         // Example usage: add a track to the list (this would be triggered by the Twitch bot integration)
@@ -485,8 +485,6 @@
             </a>
             <a href="https://www.youtube.com/youryoutube" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked footer Ютуб link')">
                 <img src="youtube-icon.png" alt="Ютуб">Ютуб
-            </a>
-        </div>
-    </footer>
+            </a></footer>
 </body>
 </html>
