@@ -1,10 +1,10 @@
 {
   "twitch": {
-    "client_id": "YOUR_CLIENT_ID_HERE",
-    "client_secret": "YOUR_CLIENT_SECRET_HERE",
-    "oauth_token": "YOUR_OAUTH_TOKEN_HERE",
-    "bot_username": "YOUR_BOT_USERNAME_HERE",
-    "channel": "TARGET_CHANNEL_HERE"
+    "client_id": "j51hx7542g7o8fmxvq6dz75jw6x1l9",
+    "client_secret": "r7hntvne8oepy68w19yyrvmefxxods",
+    "oauth_token": "yj8rudfk959r9gbj91kdqeap5xuscz",
+    "bot_username": "gikfik",
+    "channel": "geekfreak_"
   },
   "settings": {
     "prefix": "!",
