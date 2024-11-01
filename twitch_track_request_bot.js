@@ -27,44 +27,56 @@ const twitchClient = new tmi.Client({
     },
     identity: {
         username: 'gikfik',
-        password: 'oauth:kdrj9ziwdqxgfii8ci5hdza2qbuzyt',
+        password: process.env.TWITCH_OAUTH_TOKEN,
     },
     channels: ['geekfreak_'],
 });
 
-twitchClient.connect().then(() => {
-    console.log('Connected to Twitch channel');
-}).catch(err => {
-    console.error('Error connecting to Twitch:', err);
-});
+(async () => {
+    try {
+        await twitchClient.connect();
+        console.log('Connected to Twitch channel');
+    } catch (err) {
+        console.error('Error connecting to Twitch:', err);
+    }
+})();
 
 // Event listener for chat messages
-twitchClient.on('message', (channel, tags, message, self) => {
+twitchClient.on('message', async (channel, tags, message, self) => {
     if (self) return;
 
     console.log(`Received message: ${message} from @${tags.username}`);
 
     // Command to request a song
     if (message.startsWith('!sr ')) {
-        const trackUrl = message.split(' ')[1];
-        if (trackUrl && trackUrl.includes('youtube.com')) {
-            trackList.push({ url: trackUrl, user: tags.username });
-            console.log(`Track added: ${trackUrl} by ${tags.username}`);
+        const parts = message.split(' ');
+        if (parts.length > 1) {
+            const trackUrl = parts[1];
+            if (trackUrl.includes('youtube.com')) {
+                trackList.push({ url: trackUrl, user: tags.username });
+                console.log(`Track added: ${trackUrl} by ${tags.username}`);
 
-            try {
-                fs.writeFileSync('tracklist.json', JSON.stringify(trackList, null, 2));
-                console.log('Track list saved to tracklist.json');
-            } catch (error) {
-                console.error('Error saving track list:', error);
+                fs.writeFile('tracklist.json', JSON.stringify(trackList, null, 2), (error) => {
+                    if (error) {
+                        console.error('Error saving track list:', error);
+                    } else {
+                        console.log('Track list saved to tracklist.json');
+                    }
+                });
+
+                try {
+                    await twitchClient.say(channel, `Трек от @${tags.username} добавлен в очередь: ${trackUrl}`);
+                    console.log(`Notification sent to channel: ${channel}`);
+                } catch (err) {
+                    console.error('Error sending message to channel:', err);
+                }
+            } else {
+                try {
+                    await twitchClient.say(channel, `@${tags.username}, пожалуйста, предоставьте правильную ссылку на YouTube.`);
+                } catch (err) {
+                    console.error('Error sending invalid link message to channel:', err);
+                }
             }
-
-            twitchClient.say(channel, `Трек от @${tags.username} добавлен в очередь: ${trackUrl}`).then(() => {
-                console.log(`Notification sent to channel: ${channel}`);
-            }).catch(err => {
-                console.error('Error sending message to channel:', err);
-            });
-        } else {
-            console.log('Invalid track URL or not a YouTube link');
         }
     }
 
@@ -72,17 +84,19 @@ twitchClient.on('message', (channel, tags, message, self) => {
     if (message.startsWith('!song')) {
         if (trackList.length > 0) {
             const currentTrack = trackList[0];
-            twitchClient.say(channel, `Сейчас играет трек от @${currentTrack.user}: ${currentTrack.url}`).then(() => {
+            try {
+                await twitchClient.say(channel, `Сейчас играет трек от @${currentTrack.user}: ${currentTrack.url}`);
                 console.log(`Current track announcement sent to channel: ${channel}`);
-            }).catch(err => {
+            } catch (err) {
                 console.error('Error sending current track announcement:', err);
-            });
+            }
         } else {
-            twitchClient.say(channel, 'Сейчас нет заказанных треков.').then(() => {
+            try {
+                await twitchClient.say(channel, 'Сейчас нет заказанных треков.');
                 console.log(`No track message sent to channel: ${channel}`);
-            }).catch(err => {
+            } catch (err) {
                 console.error('Error sending no track message:', err);
-            });
+            }
         }
     }
 });
@@ -144,6 +158,8 @@ app.get('/', (req, res) => {
                     if (selectedSection) {
                         selectedSection.style.display = 'block';
                         console.log(`Showing section: ${tabId}`);
+                    } else {
+                        console.error(`Tab with id ${tabId} not found`);
                     }
                 }
 
@@ -200,8 +216,8 @@ app.get('/', (req, res) => {
                         console.log('Checking stream status');
                         const response = await fetch('https://api.twitch.tv/helix/streams?user_login=geekfreak_', {
                             headers: {
-                                'Client-ID': 'j51hx7542g7o8fmxvq6dz75jw6x1l9',
-                                'Authorization': '3gxnkm5pan1kag7t4lw4a7pkq98ntn'
+                                'Client-ID': process.env.TWITCH_CLIENT_ID,
+                                'Authorization': `Bearer ${process.env.TWITCH_AUTH_TOKEN}`
                             }
                         });
                         const data = await response.json();
