@@ -1,0 +1,13 @@
+{
+  "twitch": {
+    "client_id": "YOUR_CLIENT_ID_HERE",
+    "client_secret": "YOUR_CLIENT_SECRET_HERE",
+    "oauth_token": "YOUR_OAUTH_TOKEN_HERE",
+    "bot_username": "YOUR_BOT_USERNAME_HERE",
+    "channel": "TARGET_CHANNEL_HERE"
+  },
+  "settings": {
+    "prefix": "!",
+    "language": "en"
+  }
+}
