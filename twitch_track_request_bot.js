@@ -27,7 +27,7 @@ const twitchClient = new tmi.Client({
     },
     identity: {
         username: 'gikfik',
-        password: 'oauth:42aaoj42otaa7mlmjom9k7l0xc18ee',
+        password: 'oauth:kdrj9ziwdqxgfii8ci5hdza2qbuzyt',
     },
     channels: ['geekfreak_'],
 });
