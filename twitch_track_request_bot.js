@@ -49,6 +49,7 @@ twitchClient.on('message', async (channel, tags, message, self) => {
 
     // Command to request a song
     if (message.startsWith('!sr ')) {
+        console.log('Processing song request command');
         const parts = message.split(' ');
         if (parts.length > 1) {
             const trackUrl = parts[1];
@@ -71,17 +72,21 @@ twitchClient.on('message', async (channel, tags, message, self) => {
                     console.error('Error sending message to channel:', err);
                 }
             } else {
+                console.log('Invalid YouTube link provided');
                 try {
                     await twitchClient.say(channel, `@${tags.username}, пожалуйста, предоставьте правильную ссылку на YouTube.`);
                 } catch (err) {
                     console.error('Error sending invalid link message to channel:', err);
                 }
             }
+        } else {
+            console.log('Song request command missing URL');
         }
     }
 
     // Command to announce the current song
     if (message.startsWith('!song')) {
+        console.log('Processing current song command');
         if (trackList.length > 0) {
             const currentTrack = trackList[0];
             try {
@@ -91,6 +96,7 @@ twitchClient.on('message', async (channel, tags, message, self) => {
                 console.error('Error sending current track announcement:', err);
             }
         } else {
+            console.log('No tracks in the queue');
             try {
                 await twitchClient.say(channel, 'Сейчас нет заказанных треков.');
                 console.log(`No track message sent to channel: ${channel}`);
