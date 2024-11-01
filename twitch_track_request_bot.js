@@ -27,7 +27,7 @@ const twitchClient = new tmi.Client({
     },
     identity: {
         username: 'gikfik',
-        password: process.env.TWITCH_OAUTH_TOKEN,
+        password: process.env.kdrj9ziwdqxgfii8ci5hdza2qbuzyt,
     },
     channels: ['geekfreak_'],
 });
@@ -216,8 +216,8 @@ app.get('/', (req, res) => {
                         console.log('Checking stream status');
                         const response = await fetch('https://api.twitch.tv/helix/streams?user_login=geekfreak_', {
                             headers: {
-                                'Client-ID': process.env.TWITCH_CLIENT_ID,
-                                'Authorization': `Bearer ${process.env.TWITCH_AUTH_TOKEN}`
+                                'Client-ID': process.env.j51hx7542g7o8fmxvq6dz75jw6x1l9,
+                                'Authorization': `Bearer ${process.env.3gxnkm5pan1kag7t4lw4a7pkq98ntn}`
                             }
                         });
                         const data = await response.json();
