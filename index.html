@@ -14,10 +14,31 @@
 <body>
     <header>
         <div class="logo">
-    <a href="#" onclick="console.log('Logo clicked'); openTab('home'); return false;">
-        <img src="your-logo.png" alt="Логотип" height="40" style="width: auto; max-width: 100%;">
-    </a>
-</div>
+            <a href="#" onclick="console.log('Logo clicked'); openTab('home'); return false;">
+                <img src="light-logo.png" alt="Логотип для светлой темы" height="40" style="width: auto; max-width: 100%;" id="light-logo">
+                <img src="dark-logo.png" alt="Логотип для темной темы" height="40" style="width: auto; max-width: 100%; display: none;" id="dark-logo">
+            </a>
+        </div>
+        <script>
+            function updateLogo() {
+                const isDarkTheme = document.body.classList.contains('dark');
+                const lightLogo = document.getElementById('light-logo');
+                const darkLogo = document.getElementById('dark-logo');
+
+                if (isDarkTheme) {
+                    lightLogo.style.display = 'none';
+                    darkLogo.style.display = 'block';
+                } else {
+                    lightLogo.style.display = 'block';
+                    darkLogo.style.display = 'none';
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', updateLogo);
+            document.getElementById('theme-toggle-btn').addEventListener('click', () => {
+                setTimeout(updateLogo, 300);
+            });
+        </script>
         <nav>
             <ul>
                 <li><a onclick="console.log('Home tab clicked'); openTab('home')">Главная</a></li>
