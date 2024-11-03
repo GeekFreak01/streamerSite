@@ -87,10 +87,11 @@ body.dark nav a:hover {
 }
 
 #theme-toggle-btn {
+    margin-left: 30px;
     background: none;
     border: 3px solid #000;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 5px;
     box-shadow: 4px 4px 0 #000;
     display: flex;
@@ -105,171 +106,18 @@ body.dark #theme-toggle-btn {
 }
 
 #theme-toggle-btn img {
-    width: 20px;
-    height: 20px;
-}
-
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 20px;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 #000;
-}
-
-body.dark button {
-    background-color: #90caf9;
-    color: #000000;
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-body.dark button:hover {
-    background-color: #42a5f5;
-}
-
-.social-links a {
-    margin-right: 15px;
-    margin-bottom: 10px;
-    text-decoration: none;
-    color: #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    display: inline-block;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 #000;
-    position: relative;
-}
-
-body.dark .social-links a {
-    color: #90caf9;
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
-}
-
-.social-links a:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-}
-
-body.dark .social-links a:hover {
-    background-color: rgba(144, 202, 249, 0.1);
-}
-
-.social-links a img.light-icon {
-    display: block;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.social-links a img.dark-icon {
-    display: none;
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-body.dark .social-links a img.light-icon {
-    display: none;
-}
-
-body.dark .social-links a img.dark-icon {
+    width: 30px;
+    height: 30px;
     display: block;
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
     display: none;
 }
 
 body.dark section {
-    background-color: #1e1e1e;
-    outline: 3px solid #4f4f4f;
-}
-
-.extensions-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.extension-box {
-    border: 5px solid #007bff;
-    padding: 20px;
-    border-radius: 10px;
-    width: calc(50% - 20px);
-    box-sizing: border-box;
-    transition: background-color 0.3s;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 #000;
-}
-
-body.dark .extension-box {
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
-}
-
-.extension-box h3 {
-    margin: 0 0 10px;
-}
-
-.extension-box a {
-    color: #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    display: inline-block;
-    margin-bottom: 10px;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 #000;
-}
-
-body.dark .extension-box a {
-    color: #90caf9;
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
-}
-
-.extension-box a:hover {
-    background-color: rgba(0, 123, 255, 0.1);
-}
-
-body.dark .extension-box a:hover {
-    background-color: rgba(144, 202, 249, 0.1);
-}
-
-.extension-box.frankerfacez {
-    background-color: rgba(128, 0, 128, 0.02);
-    border: 5px solid rgba(128, 0, 128, 0.5);
-}
-
-body.dark .extension-box.frankerfacez {
-    background-color: rgba(128, 0, 128, 0.05);
-    border: 5px solid #4f4f4f;
-}
-
-.extension-box.seven-tv {
-    border: 5px solid rgba(0, 123, 255, 0.5);
-}
-
-body.dark .extension-box.seven-tv {
-    background-color: rgba(0, 123, 255, 0.05);
-    border: 5px solid #4f4f4f;
 }
 
 footer {
@@ -290,26 +138,19 @@ body.dark footer {
 
 .footer-social-links {
     display: flex;
-    gap: 10px;
-    margin-left: 10px;
+    gap: 15px;
 }
 
 .footer-social-links a {
-    display: flex;
-    align-items: center;
     text-decoration: none;
     color: #007bff;
-    transition: color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
     border: 3px solid #000;
     box-shadow: 4px 4px 0 #000;
-    padding: 5px;
-    position: relative;
-}
-
-.footer-social-links a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
 }
 
 body.dark .footer-social-links a {
@@ -318,31 +159,172 @@ body.dark .footer-social-links a {
     box-shadow: 4px 4px 0 #4f4f4f;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.footer-social-links a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-3px);
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+body.dark .footer-social-links a:hover {
+    background-color: rgba(144, 202, 249, 0.1);
+}
 
-    .extensions-container {
-        flex-direction: column;
-    }
+.footer-social-links a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 
-    .extension-box {
-        width: 100%;
-    }
+body.dark .footer-social-links a img.light-icon {
+    display: none;
+}
 
-    footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+body.dark .footer-social-links a img.dark-icon {
+    display: block;
+}
 
-    .footer-social-links {
-        margin-top: 10px;
-    }
+.light-icon {
+    display: block;
+}
+
+.dark-icon {
+    display: none;
+}
+
+.track-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.track-item {
+    margin: 10px 0;
+}
+
+.extensions-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+body.dark .extension-box.seven-tv {
+    color: #ffffff;
+}
+
+body.dark .extension-box.frankerfacez {
+    color: #ffffff;
+}
+
+.extension-box {
+    border: 3px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0 #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark .extension-box {
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
+}
+
+.extension-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+body.dark .extension-box:hover {
+    background-color: rgba(144, 202, 249, 0.05);
+}
+
+.extension-box a.button-link.seven-tv {
+    background-color: #64b5f6;
+    color: #ffffff;
+}
+
+.extension-box a.button-link.frankerfacez {
+    background-color: #ba68c8;
+    color: #ffffff;
+}
+
+.extension-box a.button-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.extension-box a.button-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+body.dark .extension-box a.button-link {
+    background-color: #90caf9;
+    color: #000000;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
+}
+
+body.dark .extension-box a.button-link:hover {
+    background-color: #42a5f5;
+}
+
+.request-container {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #000;
+}
+
+body.dark .request-container {
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
+}
+
+#track-list {
+    margin-top: 20px;
+}
+
+.social-button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.social-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+body.dark .social-button:hover {
+    background-color: rgba(144, 202, 249, 0.1);
+}
+
+body.dark .social-button {
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
