@@ -33,6 +33,22 @@ body.dark header {
     margin-right: auto;
 }
 
+.light-logo {
+    display: block;
+}
+
+.dark-logo {
+    display: none;
+}
+
+body.dark .light-logo {
+    display: none;
+}
+
+body.dark .dark-logo {
+    display: block;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
