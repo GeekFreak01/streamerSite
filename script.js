@@ -36,9 +36,11 @@ function updateThemeIcon() {
     const themeIcon = document.getElementById('theme-icon');
     if (document.body.classList.contains('dark')) {
         themeIcon.src = 'moon-icon.png';
+        themeIcon.alt = 'Переключить на светлую тему';
         console.log('Theme icon set to moon-icon.png');
     } else {
         themeIcon.src = 'sun-icon.png';
+        themeIcon.alt = 'Переключить на темную тему';
         console.log('Theme icon set to sun-icon.png');
     }
 }
