@@ -37,7 +37,7 @@
             document.addEventListener('DOMContentLoaded', updateLogo);
             document.getElementById('theme-toggle-btn').addEventListener('click', () => {
                 toggleTheme();
-                updateLogo();
+                setTimeout(updateLogo, 100);
             });
         </script>
         <nav>
