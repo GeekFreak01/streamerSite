@@ -1,0 +1,25 @@
+{
+  "name": "streamersite",
+  "version": "1.0.0",
+  "description": "website for geekfreak_",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "geekfreak",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "grunt-cli": "^1.5.0",
+    "package": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeekFreak01/streamerSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GeekFreak01/streamerSite/issues"
+  },
+  "homepage": "https://github.com/GeekFreak01/streamerSite#readme"
+}
