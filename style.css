@@ -8,9 +8,9 @@ body {
 }
 
 body.dark {
-    background-color: #181818;
+    background-color: #121212;
     color: #e0e0e0;
-    outline: 3px solid #3f3f3f;
+    outline: 3px solid #4f4f4f;
 }
 
 header {
@@ -24,8 +24,8 @@ header {
 }
 
 body.dark header {
-    background-color: #2a2a2a;
-    outline: 3px solid #3f3f3f;
+    background-color: #1e1e1e;
+    outline: 3px solid #4f4f4f;
 }
 
 .logo {
@@ -74,8 +74,8 @@ nav a {
 
 body.dark nav a {
     color: #e0e0e0;
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 nav a:hover {
@@ -101,8 +101,8 @@ button {
 body.dark button {
     background-color: #90caf9;
     color: #000000;
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 button:hover {
@@ -128,8 +128,8 @@ body.dark button:hover {
 
 body.dark .social-links a {
     color: #90caf9;
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 .social-links a:hover {
@@ -165,8 +165,8 @@ section {
 }
 
 body.dark section {
-    background-color: #2a2a2a;
-    outline: 3px solid #3f3f3f;
+    background-color: #1e1e1e;
+    outline: 3px solid #4f4f4f;
 }
 
 .extensions-container {
@@ -187,8 +187,8 @@ body.dark section {
 }
 
 body.dark .extension-box {
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 .extension-box h3 {
@@ -209,8 +209,8 @@ body.dark .extension-box {
 
 body.dark .extension-box a {
     color: #90caf9;
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 .extension-box a:hover {
@@ -228,7 +228,7 @@ body.dark .extension-box a:hover {
 
 body.dark .extension-box.frankerfacez {
     background-color: rgba(128, 0, 128, 0.05);
-    border: 5px solid #3f3f3f;
+    border: 5px solid #4f4f4f;
 }
 
 .extension-box.seven-tv {
@@ -237,7 +237,7 @@ body.dark .extension-box.frankerfacez {
 
 body.dark .extension-box.seven-tv {
     background-color: rgba(0, 123, 255, 0.05);
-    border: 5px solid #3f3f3f;
+    border: 5px solid #4f4f4f;
 }
 
 footer {
@@ -252,8 +252,8 @@ footer {
 }
 
 body.dark footer {
-    background-color: #2a2a2a;
-    outline: 3px solid #3f3f3f;
+    background-color: #1e1e1e;
+    outline: 3px solid #4f4f4f;
 }
 
 .footer-social-links {
@@ -281,8 +281,8 @@ body.dark footer {
 
 body.dark .footer-social-links a {
     color: #90caf9;
-    border-color: #3f3f3f;
-    box-shadow: 4px 4px 0 #3f3f3f;
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 @media (max-width: 768px) {
