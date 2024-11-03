@@ -86,7 +86,27 @@ body.dark nav a:hover {
     background-color: rgba(144, 202, 249, 0.1);
 }
 
-button, #theme-toggle-btn {
+#theme-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark #theme-toggle-btn {
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
+}
+
+button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -98,18 +118,18 @@ button, #theme-toggle-btn {
     box-shadow: 4px 4px 0 #000;
 }
 
-body.dark button, body.dark #theme-toggle-btn {
+body.dark button {
     background-color: #90caf9;
     color: #000000;
     border-color: #4f4f4f;
     box-shadow: 4px 4px 0 #4f4f4f;
 }
 
-button:hover, #theme-toggle-btn:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-body.dark button:hover, body.dark #theme-toggle-btn:hover {
+body.dark button:hover {
     background-color: #42a5f5;
 }
 
