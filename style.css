@@ -283,16 +283,28 @@ body.dark footer {
     position: relative;
 }
 
-.footer-social-links a img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
+.footer-social-links a img.light-icon {
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-body.dark .footer-social-links a {
-    color: #90caf9;
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
+.footer-social-links a img.dark-icon {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body.dark .footer-social-links a img.light-icon {
+    display: none;
+}
+
+body.dark .footer-social-links a img.dark-icon {
+    display: block;
 }
 
 @media (max-width: 768px) {
