@@ -105,19 +105,28 @@ body.dark #theme-toggle-btn {
     box-shadow: 4px 4px 0 #4f4f4f;
 }
 
-#theme-toggle-btn img {
+#theme-toggle-btn svg {
     width: 30px;
     height: 30px;
     display: block;
+    fill: #000000;
+    transition: transform 0.3s;
+}
+
+body.dark #theme-toggle-btn svg {
+    fill: #ffffff;
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    display: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
 }
 
 body.dark section {
+    background-color: #1e1e1e;
+    outline: 3px solid #4f4f4f;
 }
 
 footer {
@@ -190,28 +199,49 @@ body.dark .footer-social-links a img.dark-icon {
     display: none;
 }
 
-.track-list-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
+.social-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.track-item {
-    margin: 10px 0;
+.social-button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.social-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.social-button:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+body.dark .social-button:hover {
+    background-color: rgba(144, 202, 249, 0.1);
+}
+
+body.dark .social-button {
+    border-color: #4f4f4f;
+    box-shadow: 4px 4px 0 #4f4f4f;
 }
 
 .extensions-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-body.dark .extension-box.seven-tv {
-    color: #ffffff;
-}
-
-body.dark .extension-box.frankerfacez {
-    color: #ffffff;
 }
 
 .extension-box {
@@ -236,16 +266,6 @@ body.dark .extension-box {
 
 body.dark .extension-box:hover {
     background-color: rgba(144, 202, 249, 0.05);
-}
-
-.extension-box a.button-link.seven-tv {
-    background-color: #64b5f6;
-    color: #ffffff;
-}
-
-.extension-box a.button-link.frankerfacez {
-    background-color: #ba68c8;
-    color: #ffffff;
 }
 
 .extension-box a.button-link {
@@ -292,39 +312,41 @@ body.dark .request-container {
     box-shadow: 4px 4px 0 #4f4f4f;
 }
 
-#track-list {
-    margin-top: 20px;
+.track-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-.social-button {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0 #000;
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
+.track-item {
+    margin: 10px 0;
 }
 
-.social-button img {
-    width: 50px;
-    height: 50px;
-}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.social-button:hover {
-    transform: translateY(-5px);
-    background-color: rgba(0, 123, 255, 0.1);
-}
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-body.dark .social-button:hover {
-    background-color: rgba(144, 202, 249, 0.1);
-}
+    .extensions-container {
+        flex-direction: column;
+    }
 
-body.dark .social-button {
-    border-color: #4f4f4f;
-    box-shadow: 4px 4px 0 #4f4f4f;
+    .extension-box {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-social-links {
+        margin-top: 10px;
+    }
 }
