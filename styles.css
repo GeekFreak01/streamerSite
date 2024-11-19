@@ -177,17 +177,17 @@ body.dark .footer-social-links a:hover {
     background-color: rgba(144, 202, 249, 0.1);
 }
 
-.footer-social-links a img {
+.footer-social-links a svg {
     width: 20px;
     height: 20px;
     margin-right: 10px;
 }
 
-body.dark .footer-social-links a img.light-icon {
+body.dark .footer-social-links a svg.light-icon {
     display: none;
 }
 
-body.dark .footer-social-links a img.dark-icon {
+body.dark .footer-social-links a svg.dark-icon {
     display: block;
 }
 
@@ -219,7 +219,7 @@ body.dark .footer-social-links a img.dark-icon {
     cursor: pointer;
 }
 
-.social-button img {
+.social-button svg {
     width: 50px;
     height: 50px;
 }
