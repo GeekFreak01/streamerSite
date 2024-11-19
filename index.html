@@ -6,7 +6,6 @@
     <title>Мой Музыкальный Сайт</title>
     <link id="theme-link" rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -25,13 +24,27 @@
                 <li><a onclick="console.log('Rules tab clicked'); openTab('rules')">Правила</a></li>
             </ul>
         </nav>
-        <button onclick="console.log('Theme toggle button clicked'); toggleTheme();" id="theme-toggle-btn" style="background: none; border: none; width: 50px; height: 50px; cursor: pointer;">
-            <img src="sun-icon.png" alt="Переключить на темную тему" id="theme-icon" style="width: 100%; height: 100%;">
+        <button onclick="console.log('Theme toggle button clicked'); toggleTheme();" id="theme-toggle-btn">
+            <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <!-- Sun icon for light theme -->
+                <circle cx="12" cy="12" r="5" class="light-theme-icon" />
+                <line x1="12" y1="1" x2="12" y2="3" class="light-theme-icon" />
+                <line x1="12" y1="21" x2="12" y2="23" class="light-theme-icon" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" class="light-theme-icon" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" class="light-theme-icon" />
+                <line x1="1" y1="12" x2="3" y2="12" class="light-theme-icon" />
+                <line x1="21" y1="12" x2="23" y2="12" class="light-theme-icon" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" class="light-theme-icon" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" class="light-theme-icon" />
+                <!-- Moon icon for dark theme -->
+                <path d="M12 2C13.1046 2 14 2.89543 14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 10.8954 2 12 2Z" class="dark-theme-icon" />
+            </svg>
         </button>
     </header>
 
     <section id="home">
         <h1>Добро пожаловать на мой музыкальный сайт!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class="social-links">
             <div class="social-button">
                 <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked Телеграм link')">
