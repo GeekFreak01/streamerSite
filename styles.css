@@ -189,12 +189,20 @@ body.dark .footer-social-links a svg {
     fill: #ffffff;
 }
 
-.footer-social-links a:hover svg {
-    fill: #007bff; /* Twitter icon color as an example */
+.footer-social-links a[href*="youtube"]:hover svg {
+    fill: #FF0000; /* YouTube red */
 }
 
-body.dark .footer-social-links a:hover svg {
-    fill: #90caf9; /* Light blue for dark theme hover */
+.footer-social-links a[href*="boosty"]:hover svg {
+    fill: #FF9900; /* Boosty orange */
+}
+
+.footer-social-links a[href*="t.me"]:hover svg {
+    fill: #0088cc; /* Telegram blue */
+}
+
+.footer-social-links a[href*="discord"]:hover svg {
+    fill: #7289da; /* Discord lilac */
 }
 
 .social-links {
@@ -215,6 +223,7 @@ body.dark .footer-social-links a:hover svg {
     box-shadow: 4px 4px 0 #000;
     transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
+    position: relative;
 }
 
 .social-button svg {
@@ -222,14 +231,27 @@ body.dark .footer-social-links a:hover svg {
     height: 50px;
     fill: #000000;
     transition: fill 0.3s;
+    position: absolute;
 }
 
 body.dark .social-button svg {
     fill: #ffffff;
 }
 
-.social-button:hover svg {
-    fill: #007bff; /* Twitter icon color as an example */
+.social-button[href*="youtube"]:hover svg {
+    fill: #FF0000; /* YouTube red */
+}
+
+.social-button[href*="boosty"]:hover svg {
+    fill: #FF9900; /* Boosty orange */
+}
+
+.social-button[href*="t.me"]:hover svg {
+    fill: #0088cc; /* Telegram blue */
+}
+
+.social-button[href*="discord"]:hover svg {
+    fill: #7289da; /* Discord lilac */
 }
 
 .social-button:hover {
