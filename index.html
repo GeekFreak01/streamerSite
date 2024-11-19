@@ -1,62 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой Музыкальный Сайт</title>
     <link id="theme-link" rel="stylesheet" href="light-theme.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
-@@ -24,8 +24,8 @@
+    <header>
+        <div class="logo">
+            <a href="#" onclick="console.log('Logo clicked'); openTab('home'); return false;">
+                <img src="light-logo.png" alt="Логотип для светлой темы" height="60" class="light-logo" id="light-logo">
+                <img src="dark-logo.png" alt="Логотип для темной темы" height="60" class="dark-logo" id="dark-logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a onclick="console.log('Home tab clicked'); openTab('home')">Главная</a></li>
+                <li><a onclick="console.log('Extensions tab clicked'); openTab('extensions')">Расширения</a></li>
+                <li><a onclick="console.log('Request Track tab clicked'); openTab('request-track')">Заказ трека</a></li>
                 <li><a onclick="console.log('Rules tab clicked'); openTab('rules')">Правила</a></li>
             </ul>
         </nav>
         <button onclick="console.log('Theme toggle button clicked'); toggleTheme();" id="theme-toggle-btn" style="background: none; border: none; width: 50px; height: 50px; cursor: pointer;">
             <img src="sun-icon.png" alt="Переключить на темную тему" id="theme-icon" style="width: 100%; height: 100%;">
-        <button onclick="toggleTheme();" id="theme-toggle-btn">
-            <i id="theme-icon" class="fas fa-sun"></i>
         </button>
     </header>
 
-@@ -34,26 +34,22 @@
+    <section id="home">
+        <h1>Добро пожаловать на мой музыкальный сайт!</h1>
         <div class="social-links">
             <div class="social-button">
                 <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked Телеграм link')">
                     <img src="telegram-icon.png" alt="Телеграм" class="light-icon">
                     <img src="telegram-dark-icon.png" alt="Телеграм" class="dark-icon">
-                    <i class="fab fa-telegram"></i> Телеграм
                 </a>
             </div>
             <div class="social-button">
                 <a href="https://discord.com/yourdiscord" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked Дискорд link')">
                     <img src="discord-icon.png" alt="Дискорд" class="light-icon">
                     <img src="discord-dark-icon.png" alt="Дискорд" class="dark-icon">
-                    <i class="fab fa-discord"></i> Дискорд
                 </a>
             </div>
             <div class="social-button">
                 <a href="https://www.youtube.com/youryoutube" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked Ютуб link')">
                     <img src="youtube-icon.png" alt="Ютуб" class="light-icon">
                     <img src="youtube-dark-icon.png" alt="Ютуб" class="dark-icon">
-                    <i class="fab fa-youtube"></i> Ютуб
                 </a>
             </div>
             <div class="social-button">
                 <a href="https://boosty.to/yourboosty" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked Бусти link')">
                     <img src="boosty-icon.png" alt="Бусти" class="light-icon">
                     <img src="boosty-dark-icon.png" alt="Бусти" class="dark-icon">
-                    <i class="fas fa-donate"></i> Бусти
                 </a>
             </div>
         </div>
-@@ -66,55 +62,36 @@
+    </section>
+
+    <section id="extensions">
+        <h2>Расширения</h2>
+        <div class="extensions-container">
+            <div class="extension-box seven-tv">
                 <h3>7TV</h3>
                 <p>Расширение, в котором есть все смайлы — и из 7TV, и из BTTV, и из FFZ</p>
                 <p>
                     <a href="https://chromewebstore.google.com/detail/7tv/ammjkodgmmoknidbanneddgankgfejfh" target="_blank" class="button-link" onclick="console.log('Clicked 7TV Chrome link')">Chrome, Microsoft Edge, Яндекс Браузер, Opera и другие Chromium браузеры</a><br>
                     <a href="https://7tv.app/" target="_blank" class="button-link" onclick="console.log('Clicked 7TV Firefox link')">Mozilla Firefox</a>
-                    <a href="https://chromewebstore.google.com/detail/7tv/ammjkodgmmoknidbanneddgankgfejfh" target="_blank" class="button-link">Chrome</a>
-                    <a href="https://7tv.app/" target="_blank" class="button-link">Firefox</a>
                 </p>
             </div>
             <div class="extension-box frankerfacez">
@@ -64,7 +76,6 @@
                 <p>Расширение для браузера, которое добавляет множество функций и смайлов для Twitch.</p>
                 <p>
                     <a href="https://www.frankerfacez.com/" target="_blank" class="button-link frankerfacez" onclick="console.log('Clicked FrankerFaceZ All Browsers link')">Для всех браузеров</a>
-                    <a href="https://www.frankerfacez.com/" target="_blank" class="button-link">Для всех браузеров</a>
                 </p>
             </div>
         </div>
@@ -84,32 +95,25 @@
             <div id="track-list"></div>
         </div>
     </section>
+
     <footer>
         <p>Все права защищены &copy; 2024</p>
         <div class="footer-social-links">
             <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked footer Телеграм link')">
                 <img src="telegram-icon.png" alt="Телеграм" class="light-icon">
                 <img src="telegram-dark-icon.png" alt="Телеграм" class="dark-icon"> Телеграм
-            <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i> Телеграм
             </a>
             <a href="https://discord.com/yourdiscord" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked footer Дискорд link')">
                 <img src="discord-icon.png" alt="Дискорд" class="light-icon">
                 <img src="discord-dark-icon.png" alt="Дискорд" class="dark-icon"> Дискорд
-            <a href="https://discord.com/yourdiscord" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-discord"></i> Дискорд
             </a>
             <a href="https://www.youtube.com/youryoutube" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked footer Ютуб link')">
                 <img src="youtube-icon.png" alt="Ютуб" class="light-icon">
                 <img src="youtube-dark-icon.png" alt="Ютуб" class="dark-icon"> Ютуб
-            <a href="https://www.youtube.com/youryoutube" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-youtube"></i> Ютуб
             </a>
             <a href="https://boosty.to/yourboosty" target="_blank" rel="noopener noreferrer" onclick="console.log('Clicked footer Бусти link')">
                 <img src="boosty-icon.png" alt="Бусти" class="light-icon">
                 <img src="boosty-dark-icon.png" alt="Бусти" class="dark-icon"> Бусти
-            <a href="https://boosty.to/yourboosty" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-donate"></i> Бусти
             </a>
         </div>
     </footer>
