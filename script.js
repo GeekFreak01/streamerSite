@@ -48,7 +48,7 @@ function updateThemeIcon() {
 function updateTrackCount() {
     const trackList = document.getElementById('track-list');
     const trackCount = document.getElementById('track-count');
-    trackCount.textContent = Количество заказанных треков: ${trackList.children.length};
+    trackCount.textContent = `Количество заказанных треков: ${trackList.children.length}`;
     console.log('Track count updated:', trackList.children.length);
 }
 
@@ -80,7 +80,7 @@ function addTrackToList(trackUrl) {
     const trackList = document.getElementById('track-list');
     const trackItem = document.createElement('div');
     trackItem.className = 'track-item';
-    trackItem.innerHTML = <iframe width="560" height="315" src="${trackUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>;
+    trackItem.innerHTML = `<iframe width="560" height="315" src="${trackUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     trackList.appendChild(trackItem);
     updateTrackCount();
     console.log('Track added to list');
@@ -95,7 +95,8 @@ window.onload = function() {
         console.log('Dark theme applied from localStorage');
     }
     updateThemeIcon();
-const savedTab = localStorage.getItem('activeTab');
+
+    const savedTab = localStorage.getItem('activeTab');
     if (savedTab) {
         openTab(savedTab);
         console.log('Active tab restored from localStorage:', savedTab);
