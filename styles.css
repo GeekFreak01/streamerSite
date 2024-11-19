@@ -152,7 +152,7 @@ body.dark footer {
 
 .footer-social-links a {
     text-decoration: none;
-    color: #007bff;
+    color: #000000;
     padding: 10px;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
@@ -163,7 +163,7 @@ body.dark footer {
 }
 
 body.dark .footer-social-links a {
-    color: #90caf9;
+    color: #ffffff;
     border-color: #4f4f4f;
     box-shadow: 4px 4px 0 #4f4f4f;
 }
@@ -181,22 +181,20 @@ body.dark .footer-social-links a:hover {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    fill: #000000;
+    transition: fill 0.3s;
 }
 
-body.dark .footer-social-links a svg.light-icon {
-    display: none;
+body.dark .footer-social-links a svg {
+    fill: #ffffff;
 }
 
-body.dark .footer-social-links a svg.dark-icon {
-    display: block;
+.footer-social-links a:hover svg {
+    fill: #007bff; /* Twitter icon color as an example */
 }
 
-.light-icon {
-    display: block;
-}
-
-.dark-icon {
-    display: none;
+body.dark .footer-social-links a:hover svg {
+    fill: #90caf9; /* Light blue for dark theme hover */
 }
 
 .social-links {
@@ -222,6 +220,16 @@ body.dark .footer-social-links a svg.dark-icon {
 .social-button svg {
     width: 50px;
     height: 50px;
+    fill: #000000;
+    transition: fill 0.3s;
+}
+
+body.dark .social-button svg {
+    fill: #ffffff;
+}
+
+.social-button:hover svg {
+    fill: #007bff; /* Twitter icon color as an example */
 }
 
 .social-button:hover {
